@@ -3,69 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
     <link rel="stylesheet" href="style.css">
-    <title>Projecten</title>
+    <title>Projecten | Misael</title>
 </head>
 <body>
-    <header class="navbar" id="top">
-        <div class="nav-inner">
-            <a class="nav-link" href="home.html">Home</a>
-            <a class="nav-link" href="overmij.html">Over mij</a>
-            <a class="nav-link" href="projecten.html">Projecten</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-        </div>
-    </header>
-    <main>
-        <section class="section">
-            <h1>Projecten. <br>Ik heb het meest met HTML, CSS en JavaScript gewerkt tijdens mijn opleiding en vrije tijd.</h1>
-            <p>Op deze pagina staan enkele opdrachten en projecten die ik heb gemaakt tijdens mijn opleiding en tijdens mijn vrije tijd (6 projecten momenteel). De programmeertalen die ik gebruik voor deze projecten zijn C#, HTML, CSS,PHP en JavaScript, vooral op basisniveau.</p>
-        </section>
-        <section class="section">
-            <h2>Project 1: Portfolio website</h2>
-            <p>Ik heb deze website gemaakt om een klein beetje mijn werk te laten zien. De site is simpel en rustig, want dat vind ik fijn voor mijn portfolio.</p>
-        </section>
-            <section class="section">
-            <h2>Project 2: Inlogpagina met HTML, CSS en PHP</h2>
-            <p>Dit project heb ik gemaakt tijdens mijn vrije tijd. 2 foto's hieronder</P>
-            <img src="Assets/LoginPHP.png" alt="Project 2 Screenshot">                
-            <img src="Assets/LoginPHP2.png" alt="Project 2.2 Screenshot">
-        </section>
-        <section class="section">
-            <h2>Project 3: Takenlijst met HTML, PHP, CSS en JavaScript</h2>
-            <p>Deze takenlijst is gemaakt met HTML, CSS en JavaScript. Het is een eenvoudige to-do lijst waarin je taken kunt toevoegen, verwijderen en markeren als voltooid. 2 screenshots hieronder.</p>
-            <img src="Assets/TakenIMG.png" alt="Project 3 Screenshot">
-            <img src="Assets/TakenIMG2.png" alt="Project 3.2 Screenshot">
-        </section>
+    <div class="page-shell">
+        <header class="navbar" id="top">
+            <div class="nav-inner">
+                <a class="brand" href="home.html">Misael</a>
+                <nav class="nav-links" aria-label="Hoofdnavigatie">
+                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="overmij.html">Over mij</a>
+                    <a class="nav-link active" href="projecten.html">Projecten</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
 
-        <section class="section">
-            <h2>Project 4: Responsiveness C#</h2>
-            <p>Deze Responsiveness opdracht is gemaakt om te oefenen met C# responsiveness. 1 project screenshots en 1 video hieronder.</p>
-            <img src="Assets/ResponsivenessIMG.png" alt="Project 1 Screenshot">
-            <video style="border-radius: 15px;" autoplay muted loop>
-                <source src="Assets/Responsiveness.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
+        <main>
+            <section class="section hero reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Portfolio projecten</p>
+                    <h1>Een selectie van opdrachten die mijn groei, inzet en creativiteit laten zien.</h1>
+                    <p>Ik heb de meeste ervaring opgebouwd met HTML, CSS, JavaScript, PHP en C#. Deze projecten laten zien dat ik niet alleen functionaliteit kan bouwen, maar ook aandacht heb voor structuur en uitstraling.</p>
+                </div>
+                <div class="hero-card">
+                    <div class="orb one"></div>
+                    <div class="orb two"></div>
+                    <div class="profile-card">
+                        <p class="card-label">Focus</p>
+                        <ul class="chip-list">
+                            <li>Webdevelopment</li>
+                            <li>UI</li>
+                            <li>Logica</li>
+                            <li>Databases</li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="scroll-indicator" href="#projects-section" aria-label="Scroll naar beneden">
+                    <span>↓</span>
+                </a>
+            </section>
 
-        <section class="section">
-            <h2>Project 5: Temperature Converter, ook met HTML, CSS en JavaScript</h2>
-            <p>Dit project heb ik aan het begin van het jaar gemaakt tijdens mijn opleiding. 2 foto's hieronder</P>
-            <img src="Assets/TempConverterIMG.png" alt="Project 4 Screenshot">
-            <img src="Assets/TempConverterIMG2.png" alt="Project 4.2 Screenshot">
-        </section>
+            <section class="section reveal" id="projects-section">
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>Portfolio website</h3>
+                        <p>Ik heb deze website gemaakt om mijn werk, mijn persoonlijkheid en mijn ambities op een moderne en overzichtelijke manier te tonen.</p>
+                        <div class="project-meta"><span>HTML</span><span>CSS</span></div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Inlogpagina met HTML, CSS en PHP</h3>
+                        <p>Een project dat ik in mijn vrije tijd heb gemaakt om te oefenen met formulieren, styling en backend-logica. Test gegevens: demo@example.com, Welkom123!</p>
+                        <div class="project-meta"><span>HTML</span><span>CSS</span><span>PHP</span></div>
+                        <a class="button button-primary" href="SiteAssets/LoginPHP/index.html" target="_blank" rel="noopener noreferrer">Open live project</a>
+                        <img src="Assets/LoginPHP.png" alt="Screenshot van de inlogpagina">
+                        <img src="Assets/LoginPHP2.png" alt="Tweede screenshot van de inlogpagina">
+                    </article>
+                                        <article class="project-card">
+                        <h3>Fietsenwinkel</h3>
+                        <p>Een interactieve webwinkelopdracht met een duidelijke structuur en visuele opbouw gemaakt sammen in een groep tijdens school opleiding.</p>
+                        <img src="Assets/FietswinkelScreenshot.png" alt="screenshot wil niet gezien worden zo te zien">
+                        <div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a class="button button-primary" href="SiteAssets/FietsenWinkel/index.html" target="_blank" rel="noopener noreferrer">Open live project</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Takenlijst</h3>
+                        <p>Een overzichtelijke takenlijst waarin je taken kunt toevoegen, verwijderen en markeren als voltooid.</p>
+                        <div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a class="button button-primary" href="SiteAssets/Takenlijst/index.html" target="_blank" rel="noopener noreferrer">Open live project</a>
+                        <img src="Assets/TakenIMG.png" alt="Screenshot van de takenlijst">
+                        <img src="Assets/TakenIMG2.png" alt="Tweede screenshot van de takenlijst">
+                    </article>
+                    <article class="project-card">
+                        <h3>Responsiveness C#</h3>
+                        <p>Een oefening gericht op responsieve interfaces en het praktisch toepassen van C# in een ontwikkelcontext.</p>
+                        <div class="project-meta"><span>C#</span></div>
+                        <img src="Assets/ResponsivenessIMG.png" alt="Screenshot van de responsiveness-opdracht">
+                        <video autoplay muted loop playsinline>
+                            <source src="Assets/Responsiveness.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="project-card">
+                        <h3>Temperature Converter</h3>
+                        <p>Een kleine tool waarin temperatuur wordt omgezet met een duidelijke en eenvoudige interface.</p>
+                        <div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a class="button button-primary" href="SiteAssets/TemepratuurConverter/index.html" target="_blank" rel="noopener noreferrer">Open live project</a>
+                        <img src="Assets/TempConverterIMG.png" alt="Screenshot van de temperature converter">
+                        <img src="Assets/TempConverterIMG2.png" alt="Tweede screenshot van de temperature converter">
+                    </article>
+                    <article class="project-card">
+                        <h3>Bibliotheekcatalogus C#</h3>
+                        <p>Een project waarin ik met C# en een database werkte om een eenvoudige bibliotheekcatalogus te bouwen.</p>
+                        <div class="project-meta"><span>C#</span><span>SQL</span></div>
+                        <img src="Assets/BibiliotheekCatalogus.png" alt="Screenshot van de bibliotheekcatalogus">
+                        <img src="Assets/bibliotheek1.png" alt="Extra screenshot van de bibliotheekcatalogus">
+                        <img src="Assets/Bibliotheek2.png" alt="Derde screenshot van de bibliotheekcatalogus">
+                        <img src="Assets/Bib3.png" alt="Vierde screenshot van de bibliotheekcatalogus">
+                        <img src="Assets/Bib4.png" alt="Vijfde screenshot van de bibliotheekcatalogus">
+                    </article>
+                </div>
+            </section>
 
-        <section class="section">
-            <h2>Project 6: Bibliotheekcatalogus C#</h2>
-            <p>Deze bibliotheekcatalogus is gemaakt om te oefenen met C# en wat SQL-database erachter; ik had het een tijdje geleden gemaakt. 5 project screenshots hieronder.</p>
-            <img src="Assets/BibiliotheekCatalogus.png" alt="Project 1 Screenshot">
-            <img src="Assets/bibliotheek1.png" alt="Project 1.2 Screenshot">
-            <img src="Assets/Bibliotheek2.png" alt="Project 1.3 Screenshot">
-            <img src="Assets/Bib3.png" alt="Project 1.4 Screenshot">
-            <img src="Assets/Bib4.png" alt="Project 1.5 Screenshot">
-        </section>
-        <footer class="section">
-            <p>&copy; 2026 Misael Temesgen - software developer</p>
-        </footer>
-    </main>
+            <footer class="section footer reveal">
+                <p class="footer-text">&copy; 2026 Misael Temesgen • software developer</p>
+                <a class="button button-secondary" href="contact.html">Neem contact op</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

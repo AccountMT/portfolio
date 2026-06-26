@@ -1,0 +1,37 @@
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Temeprature Converter</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h1 id="Title">Temperatuur Converter</h1>
+
+        <input type="number" id="UitslagBox" placeholder="Temepratuur Number">
+        <button id="CelButton" onclick="ConvertC()" >Naar °C</button>
+        <button id="FarButton" onclick="ConvertF()" >Naar °F</button>
+        <button id="Shadow" onclick="OnClicked()" >Copy</button>
+        <button id="TypeConvert" onclick="ChangeConvert(TypeConvert)" >°C</button>
+        <input type="text" readonly="true" id="ResultBox">
+
+    </div>
+
+    <div id="container2" >
+        <h1 id="Title">Temperatuur Converter (copy)</h1>
+
+        <input type="number" id="UitslagBox2" placeholder="Temepratuur Number">
+        <button id="CelButton2" onclick="ConvertC2()">Naar °C</button>
+        <button id="FarButton2" onclick="ConvertF2()">Naar °F</button>
+        <button id="TypeConvert2" onclick="ChangeConvert(TypeConvert2)" >°C</button>
+        <button id="Shadow2">Copy</button>
+        <input type="text" readonly="true" id="ResultBox2">
+    </div>
+
+</body>
+</html>
+
+

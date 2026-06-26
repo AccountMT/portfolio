@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
     <link rel="stylesheet" href="style.css">
-    <title>Over mij</title>
+    <title>Over mij | Misael</title>
 </head>
 <body>
-    <header class="navbar" id="top">
-        <div class="nav-inner">
-            <a class="nav-link" href="home.html">Home</a>
-            <a class="nav-link" href="overmij.html">Over mij</a>
-            <a class="nav-link" href="projecten.html">Projecten</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-        </div>
-    </header>
-    <main>
-        <section class="section">
-            <h1>Over mij</h1>
-            <p>Momenteel zit ik in het eerste jaar van MBO niveau 4, maar mijn stage begint wanneer ik tweedejaars ben, na de zomervakantie. Ik werk graag aan opdrachten waarbij ik vooral aan het programmeren ben, want dat vind ik leuk. Mijn doel is om tijdens stage meer te leren en te kijken hoe het echt in de praktijk gaat, zodat ik mezelf daarin verder kan ontwikkelen.</p>
-            <p>Ik houd mijn stijl rustig en begrijpelijk. Samenwerken gaat mij goed, ik ben leergierig en ik werk netjes aan mijn opdrachten, en probeer altijd het beste uit mezelf te halen wanneer ik aan het werk ben met projecten.</p>
-        </section>
-        <section class="section">
-            <h2>Mijn CV</h2>
-            <p><strong>Hier zie je mijn CV</strong></p>
-            <div class="file-box">
-                <iframe src="Assets/CVMisaelTemesgen.pdf" title="CV-Bestand" class="file-viewer"></iframe>
+    <div class="page-shell">
+        <header class="navbar" id="top">
+            <div class="nav-inner">
+                <a class="brand" href="home.html">Misael</a>
+                <nav class="nav-links" aria-label="Hoofdnavigatie">
+                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link active" href="overmij.html">Over mij</a>
+                    <a class="nav-link" href="projecten.html">Projecten</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </nav>
             </div>
-            
-        </section>
-        <footer class="section">
-            <p>&copy; 2026 Misael Temesgen - software developer</p>
-        </footer>
-    </main>
+        </header>
+
+        <main>
+            <section class="section hero reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Wie ik ben</p>
+                    <h1>Ik ben nieuwsgierig, rustig en klaar om te leren in een echte stageomgeving.</h1>
+                    <p>Momenteel zit ik in het eerste jaar van MBO niveau 4, maar mijn stage begint wanneer ik tweedejaars ben na de zomervakantie. Ik werk graag aan opdrachten waarbij ik vooral aan het programmeren ben, omdat ik daar veel plezier in heb.</p>
+                    <p>Mijn stijl is overzichtelijk en begrijpelijk. Ik werk zorgvuldig, ga graag samen met anderen aan de slag en probeer altijd mijn best te doen om een nette en functionele oplossing te leveren.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="Assets/CVMisaelTemesgen.pdf">Bekijk mijn CV</a>
+                        <a class="button button-secondary" href="contact.html">Plan een gesprek</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="orb one"></div>
+                    <div class="orb two"></div>
+                    <div class="profile-card">
+                        <p class="card-label">Sterke punten</p>
+                        <ul class="chip-list">
+                            <li>Leergierig</li>
+                            <li>Samenwerken</li>
+                            <li>Netjes werken</li>
+                            <li>Probleemoplossend</li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="scroll-indicator" href="#about-section" aria-label="Scroll naar beneden">
+                    <span>↓</span>
+                </a>
+            </section>
+
+            <section class="section reveal" id="about-section">
+                <h2>Mijn CV</h2>
+                <p>Hier zie je een volledig overzicht van mijn achtergrond, mijn vaardigheden en mijn ambities.</p>
+                <div class="file-box">
+                    <iframe src="Assets/CVMisaelTemesgen.pdf" title="CV-Bestand" class="file-viewer"></iframe>
+                </div>
+            </section>
+
+            <section class="section reveal">
+                <h2>Beveiliging en professionaliteit</h2>
+                <p>Ik zet mijn portfolio op een nette en betrouwbare manier op, met een duidelijke structuur en moderne standaarden.</p>
+            </section>
+
+            <footer class="section footer reveal">
+                <p class="footer-text">&copy; 2026 Misael Temesgen • software developer</p>
+                <a class="button button-secondary" href="projecten.html">Bekijk mijn projecten</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-    

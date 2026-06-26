@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Fluitende Fietser</title>
+    <link rel="stylesheet" href="style.css">
+    <link  rel="icon" type="image/x-icon" href="Assets/FietsPNG.png"/>
+
+</head>
+<body>
+    <div class="SearchBox">
+        <div class="logo-container">
+            <img src="Assets/FietsPNG.png" id="LogoHeader" alt="Logo">
+            <h1 id="MainTitle">De Fluitende Fietser</h1>
+        </div>
+        <div class="search-container">
+            <input type="search" id="SearchBar" placeholder="Zoek fietsen...">
+            <img src="Assets/ZoekIcon.png" id="SearchIMG" alt="Zoek">
+        </div>
+        <img src="Assets/WinkelCart.png" id="WinkelCartHeader" alt="Winkelwagen">
+    </div>
+
+    <nav class="NavBar">
+        <a href="#" class="NavItem" data-page="home">HOME</a>
+        <a href="#" class="NavItem" data-page="fietsen">FIETSEN</a>
+        <a href="#" class="NavItem" data-page="verhuur">VERHUUR</a>
+        <a href="#" class="NavItem" data-page="contact">CONTACT</a>
+        <a href="#" class="NavItem" data-page="overons">OVER ONS</a>
+    </nav>
+    
+    <div id="home-page" class="page-content active">
+        <div class="image-carousel" id="imageCarousel">
+            <button class="carousel-control prev" id="carouselPrev" aria-label="Vorige fiets">‹</button>
+            <img id="HomeAfbeelding" src="Assets/fiets1.jpg" alt="Fiets in de spotlight">
+            <button class="carousel-control next" id="carouselNext" aria-label="Volgende fiets">›</button>
+        </div>
+        <div class="OpeningsInformatieBox">
+            <h6 id="OpeningsInformatieText">WE ZIJN OP DIT MOMENT: OPEN</h6>
+        </div>
+        <div id="WelkomBeschrijving">
+            <p style="font-weight: bolder; text-align: center;">Welkom bij De Fluitende Fietser!</p>
+        <p>
+            <p style="font-size: large; font-weight: normal; text-align: center;">Wij zijn een echt familiebedrijf waar passie voor de fiets centraal staat. <br>Of u nu op zoek bent naar een nieuwe e-bike <br> of een betrouwbare tweedehands stadsfiets, wij helpen u graag fluitend op weg.</p>
+        </p>
+        </div>
+    </div>
+
+    <div id="fietsen-page" class="page-content">
+        <div class="bikes-section">
+            <h2>Onze Fietsen</h2>
+            <div class="bikes-grid">
+                <div class="bike-card">
+                    <div class="bike-badge">NIEUW</div>
+                    <img src="Assets/fiets1.jpg" alt="City Glide Premium" onerror="handleBikeImg(this)">
+                    <h3>City Glide Premium</h3>
+                    <p class="price">€ 899</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-badge">TWEEDEHANDS</div>
+                    <img src="Assets/fiets2.jpg" alt="Mountain King" onerror="handleBikeImg(this)">
+                    <h3>Mountain King</h3>
+                    <p class="price">€ 1250</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-badge">NIEUW</div>
+                    <img src="Assets/fiets3.jpg" alt="Business E-Pro" onerror="handleBikeImg(this)">
+                    <h3>Business E-Pro</h3>
+                    <p class="price">€ 2499</p>
+                </div>
+                <div class="bike-card">
+                    <img src="Assets/fiets4.jpg" alt="Vintage Roadie" onerror="handleBikeImg(this)">
+                    <h3>Vintage Roadie</h3>
+                    <p class="price">€ 350</p>
+                </div>
+                <div class="bike-card">
+                    <div class="bike-badge">NIEUW</div>
+                    <img src="Assets/fiets5.jpg" alt="Gravel Master" onerror="handleBikeImg(this)">
+                    <h3>Gravel Master</h3>
+                    <p class="price">€ 1850</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="verhuur-page" class="page-content">
+        <div class="rental-frame">
+            <img class="rental-image left" src="Assets/fiets1.jpg" alt="Fiets links" onerror="handleBikeImg(this)">
+            <div class="rental-section">
+                <h2>Fietsverhuur</h2>
+            <table class="rental-table">
+                <thead>
+                    <tr>
+                        <th>SELECTIE</th>
+                        <th>FIETS TYPE</th>
+                        <th>PRIJS P/D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Stadsfiets Standaard</td>
+                        <td>€ 12.50</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Elektrische Fiets</td>
+                        <td>€ 25.00</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Mountainbike Pro</td>
+                        <td>€ 20.00</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Kinderfiets</td>
+                        <td>€ 7.50</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Bakfiets Elektrisch</td>
+                        <td>€ 35.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="book-btn">Huur de fietsen</button>
+        </div>
+            <img class="rental-image right" src="Assets/fiets5.jpg" alt="Fiets rechts" onerror="handleBikeImg(this)">
+        </div>
+    </div>
+
+    <div id="overons-page" class="page-content">
+        <div class="about-section">
+            <h2>Over Ons</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="subheading">Onze geschiedenis</p>
+                    <h3>Vakmanschap sinds 1974</h3>
+                    <p>De Fluitende Fietser werd in 1974 opgericht door Frank Fennema in een kleine garage in Amsterdam. Wat begon als passie voor reparatie van racefietsen is uitgegroeid tot een begrip in de stad. Nu wordt de winkel door zijn kinderen voortgezet met aandacht voor service, kwaliteit en betrouwbaarheid.</p>
+                    <div class="stats">
+                        <div><strong>50+</strong><span>jaar ervaring</span></div>
+                        <div><strong>15k+</strong><span>fietsen verkocht</span></div>
+                        <div><strong>100%</strong><span>passie</span></div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Assets/showroom.jpg" alt="Showroom" onerror="handleBikeImg(this)">
+                    <p>Onze eerste showroom in Amsterdam (1974)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-page" class="page-content">
+        <div class="contact-section">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-form-box">
+                    <div class="contact-row">
+                        <input type="text" placeholder="Voornaam" aria-label="Voornaam">
+                        <input type="text" placeholder="Achternaam" aria-label="Achternaam">
+                    </div>
+                    <input class="full-input" type="email" placeholder="E-mail" aria-label="Email">
+                    <textarea class="full-input" rows="5" placeholder="Uw vraag" aria-label="Uw vraag"></textarea>
+                    <button class="contact-btn">Verstuur</button>
+                </div>
+                <div class="contact-info-box">
+                    <div class="info-group">
+                        <h3>Openingtijden</h3>
+                        <ul>
+                            <li>Maandag: 09:00 - 18:00</li>
+                            <li>Dinsdag: 09:00 - 18:00</li>
+                            <li>Woensdag: 09:00 - 18:00</li>
+                            <li>Donderdag: 09:00 - 18:00</li>
+                            <li>Vrijdag: 09:00 - 18:00</li>
+                            <li>Zaterdag: 09:00 - 17:00</li>
+                            <li>Zondag: Gesloten</li>
+                        </ul>
+                    </div>
+                    <div class="info-group">
+                        <h3>Adresgegevens</h3>
+                        <ul>
+                            <li>Hoofdstraat 123, 1011 AB Amsterdam</li>
+                            <li>+31 (0)20 123 4567</li>
+                            <li>info@fluitendefietser.nl</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerBox">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NAVIGATIE</h3>
+                <ul>
+                    <li><a href="#">Over ons</a></li>
+                    <li><a href="#">Contact info</a></li>
+                    <li><a href="#">Algemene voorwaarden</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li><a href="mailto:info@fluitendefietser.nl">📧 info@fluitendefietser.nl</a></li>
+                    <li><a href="tel:+31201234567">📞 +31 (0)20 123 4567</a></li>
+                    <li><a href="#">📍 Hoofdstraat 123, 1011 AB Amsterdam</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>SOCIAL MEDIA</h3>
+                <div class="social-buttons">
+                    <a href="#" class="facebook-btn">👍 Facebook</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>BEDRIJFSGEGEVENS</h3>
+                <ul>
+                    <li>KVK: 88599665</li>
+                    <li>BTW: NL999888492Z09</li>
+                    <li>© 2022 De Fluitende Fietser</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cyclist-container">
+            <div class="cyclist">🚴</div>
+        </div>
+    </div>
+
+    
+
+</body>  
+    <script src="script.js"></script>
+</html>

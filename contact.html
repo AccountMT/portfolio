@@ -3,33 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+    <title>Contact | Misael</title>
 </head>
 <body>
-    <header class="navbar" id="top">
-        <div class="nav-inner">
-            <a class="nav-link" href="home.html">Home</a>
-            <a class="nav-link" href="overmij.html">Over mij</a>
-            <a class="nav-link" href="projecten.html">Projecten</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-        </div>
-    </header>
-    <main>
-        <section class="section">
-            <h1>Contact</h1>
-            <p>Hier zijn mijn contactgegevens, maar het is puur voor de stijl. Het staat ook op mijn cv.</p>
-        </section>
-        <section class="section">
-            <h2>Contactinformatie</h2>
-            <ul>
-                <li>E-mail: misaeltemesgen200@gmail.com</li>
-                <li>Telefoon: 0643125789</li>
-            </ul>
-        </section>
-        <footer class="section">
-            <p>&copy; 2026 Misael Temesgen - software developer</p>
-        </footer>
-    </main>
+    <div class="page-shell">
+        <header class="navbar" id="top">
+            <div class="nav-inner">
+                <a class="brand" href="home.html">Misael</a>
+                <nav class="nav-links" aria-label="Hoofdnavigatie">
+                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="overmij.html">Over mij</a>
+                    <a class="nav-link" href="projecten.html">Projecten</a>
+                    <a class="nav-link active" href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="section hero reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Contact</p>
+                    <h1>Ik hoor graag van jou als je een stageplek, feedback of een samenwerking ziet liggen.</h1>
+                    <p>Gebruik het formulier of neem rechtstreeks contact op via e-mail of telefoon. Ik reageer snel en blijf professioneel en netjes in mijn communicatie.</p>
+                </div>
+                <div class="hero-card">
+                    <div class="orb one"></div>
+                    <div class="orb two"></div>
+                    <div class="profile-card">
+                        <p class="card-label">Direct contact</p>
+                        <p>Hier vind je mijn contactgegevens, zodat je snel en gemakkelijk kunt bereiken wie ik ben en wat ik doe.</p>
+                    </div>
+                </div>
+                <a class="scroll-indicator" href="#contact-section" aria-label="Scroll naar beneden">
+                    <span>↓</span>
+                </a>
+            </section>
+
+            <section class="section contact-layout reveal" id="contact-section">
+                <div>
+                    <h2>Contactgegevens</h2>
+                    <ul class="contact-list">
+                        <li><strong>E-mail:</strong> misaeltemesgen200@gmail.com</li>
+                        <li><strong>Telefoon:</strong> 0643125789</li>
+                        <li><strong>Locatie:</strong> Nederland, Eindhoven - beschikbaar voor stage</li>
+                    </ul>
+                    <div class="info-card" style="margin-top: 1rem;">
+                        <h3>Professioneel contact</h3>
+                        <p>Ik geef graag duidelijkheid over wie ik ben, wat ik doe en hoe ik kan bijdragen aan een stageplek of project.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="section footer reveal">
+                <p class="footer-text">&copy; 2026 Misael Temesgen • software developer</p>
+                <a class="button button-secondary" href="home.html">Terug naar home</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

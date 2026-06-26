@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Preview</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f3f7ff;
+            --card: #ffffff;
+            --text: #14243c;
+            --muted: #5f6f86;
+            --accent: #087df2;
+            --accent-dark: #005ec2;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f3f7ff, #e8f2ff);
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+        }
+
+        .page-box {
+            width: min(540px, 100%);
+            background: var(--card);
+            border: 1px solid rgba(20, 36, 60, 0.08);
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(20, 36, 60, 0.12);
+            padding: 2rem;
+        }
+
+        h1 {
+            margin: 0 0 0.75rem;
+            font-size: 1.9rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 0 1.2rem;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #cfd8e3;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.95rem 1rem;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .status {
+            min-height: 1.4rem;
+            margin-top: 0.7rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .status.success { color: #0f9d58; }
+        .status.error { color: #d93025; }
+    </style>
+</head>
+<body>
+    <div class="page-box">
+        <h1>Login Preview</h1>
+        <p>Live demo login pagina</p>
+        <form id="loginForm">
+            <input id="email" type="email" placeholder="E-mail" required>
+            <input id="password" type="password" placeholder="Wachtwoord" required>
+            <button type="submit">Inloggen</button>
+        </form>
+        <p class="status" id="status" aria-live="polite"></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const status = document.getElementById('status');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (email === 'demo@example.com' && password === 'Welkom123!') {
+                status.textContent = 'Succesvol ingelogd';
+                status.className = 'status success';
+            } else {
+                status.textContent = 'E-mail of wachtwoord is onjuist';
+                status.className = 'status error';
+            }
+        });
+    </script>
+</body>
+</html>
