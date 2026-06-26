@@ -1,37 +1,111 @@
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Temeprature Converter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperatuur Converter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="container">
-        <h1 id="Title">Temperatuur Converter</h1>
 
-        <input type="number" id="UitslagBox" placeholder="Temepratuur Number">
-        <button id="CelButton" onclick="ConvertC()" >Naar °C</button>
-        <button id="FarButton" onclick="ConvertF()" >Naar °F</button>
-        <button id="Shadow" onclick="OnClicked()" >Copy</button>
-        <button id="TypeConvert" onclick="ChangeConvert(TypeConvert)" >°C</button>
-        <input type="text" readonly="true" id="ResultBox">
+  <main class="app">
+    <div class="card">
 
+      <header class="app__header">
+        <div class="app__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 14.5V4a2 2 0 0 0-4 0v10.5a4 4 0 1 0 4 0Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="17" r="1.4" fill="currentColor"/>
+          </svg>
+        </div>
+        <h1>Temperatuur Converter</h1>
+        <p class="app__subtitle">Typ een waarde in één veld — de andere twee rekenen automatisch mee.</p>
+      </header>
+
+      <section class="gauge" aria-label="Temperatuurmeter" id="gauge">
+        <div class="gauge__labels" aria-hidden="true">
+          <span class="gauge__end">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M12 2l-2.5 2M12 2l2.5 2M12 22l-2.5-2M12 22l2.5-2M2 12h20M2 12l2-2.5M2 12l2 2.5M22 12l-2-2.5M22 12l-2 2.5M5 5l14 14M5 5l3.2.5M5 5l.5 3.2M19 19l-3.2-.5M19 19l-.5-3.2M19 5L5 19M19 5l-3.2-.5M19 5l-.5 3.2M5 19l3.2.5M5 19l.5-3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            −40°
+          </span>
+          <span class="gauge__end gauge__end--hot">
+            60°
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="gauge__track-wrap">
+          <div class="gauge__badge" id="gaugeBadge">10°C</div>
+          <div class="gauge__track">
+            <div class="gauge__fill" id="gaugeFill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fields" aria-label="Temperatuurwaarden">
+
+        <div class="field" data-unit="celsius">
+          <div class="field__top">
+            <label for="celsius">Celsius</label>
+            <span class="field__chip">°C</span>
+          </div>
+          <div class="field__row">
+            <input type="text" inputmode="decimal" id="celsius" value="10" autocomplete="off" aria-describedby="celsiusHint">
+            <button class="copy-btn" data-copy="celsius" type="button" aria-label="Kopieer Celsius-waarde">
+              <svg class="icon-copy" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15V6a2 2 0 0 1 2-2h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M4 12.5 9 17l11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="field__hint" id="celsiusHint"></p>
+        </div>
+
+        <div class="field" data-unit="fahrenheit">
+          <div class="field__top">
+            <label for="fahrenheit">Fahrenheit</label>
+            <span class="field__chip">°F</span>
+          </div>
+          <div class="field__row">
+            <input type="text" inputmode="decimal" id="fahrenheit" value="50" autocomplete="off" aria-describedby="fahrenheitHint">
+            <button class="copy-btn" data-copy="fahrenheit" type="button" aria-label="Kopieer Fahrenheit-waarde">
+              <svg class="icon-copy" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15V6a2 2 0 0 1 2-2h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M4 12.5 9 17l11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="field__hint" id="fahrenheitHint"></p>
+        </div>
+
+        <div class="field" data-unit="kelvin">
+          <div class="field__top">
+            <label for="kelvin">Kelvin</label>
+            <span class="field__chip">K</span>
+          </div>
+          <div class="field__row">
+            <input type="text" inputmode="decimal" id="kelvin" value="283.15" autocomplete="off" aria-describedby="kelvinHint">
+            <button class="copy-btn" data-copy="kelvin" type="button" aria-label="Kopieer Kelvin-waarde">
+              <svg class="icon-copy" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15V6a2 2 0 0 1 2-2h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M4 12.5 9 17l11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="field__hint" id="kelvinHint">Kan niet negatief zijn — dat is kouder dan het absolute nulpunt.</p>
+        </div>
+
+      </section>
+
+      <div class="actions">
+        <button id="resetBtn" class="btn-reset" type="button">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M20 20v-6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 15a7 7 0 0 0 12.3 2.7M18.5 9a7 7 0 0 0-12.3-2.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Terug naar 0 °C
+        </button>
+      </div>
+
+      
     </div>
 
-    <div id="container2" >
-        <h1 id="Title">Temperatuur Converter (copy)</h1>
+    <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+  </main>
 
-        <input type="number" id="UitslagBox2" placeholder="Temepratuur Number">
-        <button id="CelButton2" onclick="ConvertC2()">Naar °C</button>
-        <button id="FarButton2" onclick="ConvertF2()">Naar °F</button>
-        <button id="TypeConvert2" onclick="ChangeConvert(TypeConvert2)" >°C</button>
-        <button id="Shadow2">Copy</button>
-        <input type="text" readonly="true" id="ResultBox2">
-    </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
